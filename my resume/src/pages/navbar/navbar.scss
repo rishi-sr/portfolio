@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 90px;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+
+  background: transparent;
+
+  &.scrolled {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    img {
+      height: 40px;
+      width: 70px;
+      object-fit: contain;
+    }
+    h2 {
+      color: #306db1;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    
+  }
+
+  .links {
+    display: flex;
+    gap: 25px;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      color: #306db1;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #1a4d80;
+      }
+    }
+
+    // 🔥 Mobile hidden by default
+    @media (max-width: 768px) {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+
+  background: transparent; 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  align-items: center;
+  transform: translateY(-200%);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 0px 0 50px 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+  }
+
+  .social {
+    display: flex;
+    gap: 15px;
+
+    a {
+      font-size: 20px;
+      color: #306db1;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #1a4d80;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 26px;
+    color: #306db1;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+      .navbar{
+        width: 100%;
+        padding:2px;
+
+        .logo{
+          img{
+            height: 30px;
+            width: 60px;
+
+          }
+          h2{
+            font-size: 25px;
+          }
+        }
+
+      }
+}

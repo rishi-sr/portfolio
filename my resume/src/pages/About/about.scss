@@ -1,0 +1,419 @@
+.about{
+    height: 700px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    position: relative;
+    .shape3{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid white;
+        position: absolute;
+        right: 150px;
+        top: 100px;
+        z-index: 10;
+        
+    }
+    .shape4{
+      width: 0;
+      height: 0;
+      border-top:20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 30px solid white;
+      position: absolute;
+      bottom: 150px;
+      left: 700px;  
+      animation:toandfro 1s ease-in-out infinite alternate;
+
+    }
+    @keyframes toandfro {
+      from{
+          transform: translateX(0px);
+      }
+      to{
+          transform: translateX(10px);
+      }
+    }
+    .s4{
+      position: absolute;
+      bottom: 150px;
+      left: 730px;  
+    }
+    .s3{
+        right: 160px;
+        top: 80px;
+        border: 3px solid white;
+    }
+    .shape5{
+
+        svg{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            left: 730px;
+            top: 80px;
+            animation: rot 9s infinite linear;
+        }
+        @keyframes rot {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+            
+        }
+    }
+
+    
+    .abouttxt{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .content{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        
+        h3{
+            font-size: 30px;
+            color: white;
+            align-self: flex-start;
+        }
+        h1{
+            font-size: 50px;
+            color: white;
+            align-self: flex-start;
+            
+        }
+        h4{
+            font-size: 25px;
+            color: white;
+            align-self: flex-start;
+            
+            span{
+                color: #306db1;
+                align-self: flex-start;
+            }
+        }
+        p{
+            color: #73a7e2;
+            align-self: flex-start;
+            margin-top: 20px;
+        }a{
+            align-self: flex-start;
+        }
+        button{
+            background-color: #306db1;
+            color: white;
+            align-self: flex-start;
+            margin-top: 30px;
+            height: 50px;
+            width: 120px;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 0px 14px 0px #306db1;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &:hover{
+                background-color: #01010d;
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+    .aboutimg{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .modernpotrait{
+            width: 60%;
+            height: 80%;
+            position: relative;
+            overflow: hidden;
+
+            .shape1{
+            height: 300px;
+            width: 300px;
+            border:4px solid white;
+            border-radius: 20px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            animation: updown 1s  infinite alternate;
+        }
+        @keyframes updown {
+            from{
+                transform: translateY(0) rotate(30deg);
+            }
+            to{
+                transform: translateY(10px) rotate(30deg);
+            }
+        }
+        .shape2{
+            height: 300px;
+            width: 300px;
+            border:4px solid white;
+            border-radius: 20px;
+            position: absolute;
+            left: 50px;
+            top: 90px;
+            transform: rotate(30deg);
+            background-color: #306db1;
+            animation: updown 1s ease-in-out infinite alternate;
+            img{
+                transform: rotate(-30deg);
+                height: 470px;
+                position: absolute;
+                top: -115px;
+                left: -94px;
+            }
+        }
+        }
+    }
+    
+}
+
+
+/* for-phone-only */
+@media (max-width: 599px) {
+.about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: auto;
+  overflow: hidden;
+
+  .shape3{
+    top: 57%;
+    left: 65%;
+  }
+  .s3{
+    left: 67%;
+    top: 59%;
+  }
+  .shape4{
+
+    left: 20%;
+    top: 90%;
+  }
+  .s4{
+    left: 25%;
+    top: 90%;
+  }
+  .shape5{
+    svg{
+        left: 80%;
+        top: 5%;
+    }
+  }
+
+  .abouttxt {
+    margin-top: 20px;
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      width: 85%;
+      text-align: center;
+
+      h1 {
+        font-size: 32px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+        text-align: justify;
+      }
+    }
+  }
+
+  .aboutimg {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .modernpotrait {
+      width: 80%;
+      max-width: 350px;
+      position: relative;
+
+      .shape1{
+        width: 150px;
+        height: 150px;
+        top: 15%;
+        left: 25%;
+      }
+      .shape2{
+        width: 150px;
+        height: 150px;
+        top: 28%;
+        left: 28%;
+
+
+        img {
+        width: 250px;
+        height: 250px;
+        top: -48%;
+        left: -39%;
+      }
+      }
+      
+    }
+  }
+}
+}
+@media (min-width:600px)and (max-width:1024px) {
+    .about{
+        width: 100%;
+        overflow: hidden;
+        min-height: auto;
+        position: relative;
+
+        .shape3{
+            position: absolute;
+            top: 25%;
+            left: 83%;
+        }
+        .s3{
+
+            left: 83%;
+            top: 28%;
+        }
+        .shape4{
+            position: absolute;
+            top: 80%;
+            left: 40%;
+        }
+        .s4{
+            left: 43%;
+        }
+        .shape5{
+            position: absolute;
+            left: 40%;
+            svg{
+                left:80%;
+            }
+        }
+
+        .abouttxt{
+            width: 50%;
+            .content{
+                width: 80%;
+
+                h1{
+                    font-size: 35px;
+                }
+                h3{
+                    font-size: 25px;
+                }
+                h4{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+        }
+        .aboutimg{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            min-height: auto;
+            justify-content: center;
+
+            .modernpotrait{
+                width: 100%;
+                height: 60%;
+                
+
+                .shape1{
+                    height: 13rem;
+                    width: 13rem;
+                }
+                .shape2{
+                    height: 13rem;
+                    width: 13rem;
+
+                    img{
+                        height: 170%;
+                        top: -50%;
+                        left: -42%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .about{
+        width: 100%;
+        overflow: hidden;
+        min-height: auto;
+
+        .shape3{
+            left:80%;
+        }
+        .shape4{
+            left: 35%;
+        }
+        .s4{
+            left: 37%;
+        }
+        .shape5{
+            svg{
+                left: 40%;
+            }
+        }
+
+        .aboutimg{
+         width: 50%;
+
+         .modernpotrait{
+            width: 100%;
+         }
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .about{
+        width: 100%;
+
+
+        .shape3{
+            left: 80%;
+        }
+        .aboutimg{
+
+            .modernpotrait{
+                width: 75%;
+            }
+
+        }
+    }
+}
