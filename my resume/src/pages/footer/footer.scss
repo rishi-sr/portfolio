@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.footer {
+  color: white;
+  padding: 2.5rem 0 1rem;
+  background: linear-gradient(#306db1, #072242);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0px 10px 0 #306db1;
+  border-radius: 40px 40px 0 0;
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      margin: 0 1.2rem;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding: 0.5rem 0;
+      color: white;
+      cursor: pointer;
+      transition: color .3s ease;
+
+      /* underline animation — now visible */
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: white; /* or #73a7e2 */
+        transition: width .3s ease;
+      }
+      &:hover::after { width: 100%; }
+    }
+  }
+
+  /* renamed to match JSX */
+  .footer-copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    width: 100%;
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 0 1rem;
+    .footer-nav a { margin: 0 0.8rem; font-size: 0.9rem; }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.5rem 0 1rem;
+    .footer-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+      a { margin: 0; }
+    }
+    .footer-copyright p { font-size: 0.8rem; }
+  }
+}

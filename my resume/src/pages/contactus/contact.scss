@@ -1,4 +1,140 @@
 .contact{
-    height: 500px;
+    height: auto;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+
+    .conthead{
+        width: 100%;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        .line2{
+            height: 3px;
+            width: 11%;
+            border-radius: 20px;
+            background-color: #306db1;
+            box-shadow: 0px 0px 10px 3px #306db1;
+        }
+        p{
+            color: rgb(135, 135, 135);
+        }
+    }
+
+    .formmain{
+        height: auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+
+        .form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100%;
+
+
+            .contact-container {
+                  width: 100%;
+                  max-width: 500px;
+                  margin: 50px auto;
+                  padding: 20px;
+                  border: 2px solid #306db1;
+                  box-shadow: 0px 0px 10px 3px #306db1;
+                  border-radius: 12px;
+
+                  h2 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    color: #306db1;
+                  }
+              
+                  .contact-form {
+                    .form-group {
+                      margin-bottom: 15px;
+                    
+                      label {
+                        display: block;
+                        margin-bottom: 5px;
+                        font-weight: 600;
+                        color: #306db1;
+                        font-size: 20px;
+                      }
+                  
+                      input, 
+                      textarea {
+                        width: 95%;
+                        min-width: 95%;
+                        max-width: 95%;
+                        padding: 10px;
+                        border: 1px solid #306db1;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        transition: all 0.3s ease;
+                    
+                        &:focus {
+                          border-color: #306db1;
+                          outline: none;
+                          box-shadow: 0 0 5px rgba(48,109,177,0.3);
+                        }
+                      }
+                    }
+                
+                    .btn-submit {
+                      width: 100%;
+                      padding: 12px;
+                      background: #306db1;
+                      color: #fff;
+                      border: none;
+                      border-radius: 8px;
+                      font-size: 16px;
+                      font-weight: bold;
+                      cursor: pointer;
+                      transition: 0.3s;
+                    
+                      &:hover {
+                        background: #24548a;
+                      }
+                    }
+                  }
+                }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+  .contact{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .formmain{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .form{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        .contact-container{
+        }
+      }
+    }
+  }
 }

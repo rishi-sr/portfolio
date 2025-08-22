@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
   server:{
     allowedHosts:[
-      "risk-happy-tropical-housewives.trycloudflare.com",
+      "processed-appears-guatemala-sunglasses.trycloudflare.com",
     ]
   }
 })

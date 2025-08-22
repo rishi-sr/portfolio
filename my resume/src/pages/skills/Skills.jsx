@@ -45,7 +45,7 @@ const techStack = [
 const Skills = () => {
   return (
     <>
-    <div className="skills">
+    <div className="skills" id='#skills'>
       <div className="head">
         <h2>My Skills</h2>
         <div className="line"></div>

@@ -2,17 +2,26 @@ import React, { useState, useEffect } from 'react'
 import './navbar.scss'
 import { FaLinkedin, FaGithub, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
+// Smooth scroll function
+const handleScroll = (sectionId, setMenuOpen) => {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+  if (setMenuOpen) setMenuOpen(false); // close mobile menu
+};
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScrollY = () => {
       setScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScrollY);
+    return () => window.removeEventListener("scroll", handleScrollY);
   }, []);
 
   return (
@@ -25,11 +34,11 @@ const Navbar = () => {
 
       {/* Links (desktop + mobile) */}
       <div className={`links ${menuOpen ? "active" : ""}`}>
-        <a href="#home" onClick={() => setMenuOpen(false)}>About</a>
-        <a href="#projects" onClick={() => setMenuOpen(false)}>Skills</a>
-        <a href="#about" onClick={() => setMenuOpen(false)}>Projects</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Education</a>
-        <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Me</a>
+        <a href="#about" onClick={(e) => { e.preventDefault(); handleScroll("about", setMenuOpen); }}>About</a>
+        <a href="#skills" onClick={(e) => { e.preventDefault(); handleScroll("skills", setMenuOpen); }}>Skills</a>
+        <a href="#projects" onClick={(e) => { e.preventDefault(); handleScroll("projects", setMenuOpen); }}>Projects</a>
+        <a href="#education" onClick={(e) => { e.preventDefault(); handleScroll("education", setMenuOpen); }}>Education</a>
+        <a href="#contact" onClick={(e) => { e.preventDefault(); handleScroll("contact", setMenuOpen); }}>Contact Me</a>
       </div>
 
       {/* Social (desktop only) */}
@@ -47,4 +56,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

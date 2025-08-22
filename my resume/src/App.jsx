@@ -1,27 +1,36 @@
-
+import React from "react";
+import Navbar from "./pages/navbar/Navbar";
+import About from "./pages/About/About";
+import Skills from "./pages/skills/Skills";
+import Projects from "./pages/projects/Projects";
+import Education from "./pages/education/Education";
+import Contact from "./pages/contactus/Contact";
+import Footer from "./pages/footer/Footer";
 import './App.scss'
-import About from './pages/About/About'
-import Contact from './pages/contactus/Contact'
-import Education from './pages/education/Education'
-import Navbar from './pages/navbar/Navbar'
-import Projects from './pages/projects/Projects'
-import Skills from './pages/skills/Skills'
 
 function App() {
-  
-
   return (
     <>
       <div className="triangle-bg"></div>
-      <Navbar/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Education/>
-      <Contact/>
-
+      <Navbar />
+      <div id="about" >
+        <About />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="education">
+        <Education />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

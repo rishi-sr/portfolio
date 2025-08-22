@@ -25,7 +25,7 @@ const Education = () => {
           </div>
           <div className="cardcontent">
             <h3>Current CGPA: 7.25</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorem animi error cum consectetur nostrum inventore! Error, mollitia nesciunt? Corrupti alias qui assumenda incidunt inventore, exercitationem eligendi in labore culpa.</p>
+            <p>I am pursuing a B.Tech in Computer Science and Engineering at Noida Institute of Engineering and Technology, Greater Noida, with a CGPA of 7.25. Currently in my 4th year, I have gained expertise in core CS subjects, web development, and full-stack projects, with a passion for innovative software solutions.</p>
           </div>
         </div>
         <div className="card c2">
@@ -34,14 +34,14 @@ const Education = () => {
               <img src="bvv.jpg" alt="" />
             </div>
             <div className="details">
-              <h1>CBSE(XII) - PCM</h1>
+              <h1>CBSE(XII) - PCM with Computer Science</h1>
               <h6>Bal Vikas Vidyalaya</h6>
               <p>2019 - 2021</p>
             </div>
           </div>
           <div className="cardcontent">
             <h3>Percentage: 76.8%</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorem animi error cum consectetur nostrum inventore! Error, mollitia nesciunt? Corrupti alias qui assumenda incidunt inventore, exercitationem eligendi in labore culpa.</p>
+            <p>I completed my CBSE Class XII (PCM with Computer Science) from Bal Vikas Vidyalaya in 2021, securing 76.8%. My subjects included Physics, Chemistry, Mathematics, and Computer Science, which helped me develop strong logical thinking, programming fundamentals, and analytical skills. This academic foundation fueled my interest in engineering and software development..</p>
           </div>
         </div>
         <div className="card c3">
@@ -57,7 +57,7 @@ const Education = () => {
           </div>
           <div className="cardcontent">
             <h3>Percentage: 72.3%</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorem animi error cum consectetur nostrum inventore! Error, mollitia nesciunt? Corrupti alias qui assumenda incidunt inventore, exercitationem eligendi in labore culpa.</p>
+            <p>I completed my CBSE Class X from B.L. Indo Anglian Public School in 2019, securing 72.3%. This stage of schooling helped me strengthen my foundation in Mathematics, Science, and English, while also building qualities like discipline, problem-solving, and teamwork, which guided me towards pursuing Computer Science and Engineering later.</p>
           </div>
         </div>
         <div className="img i1"><img src="niet.jpg" alt=""  /></div>
