@@ -5,10 +5,11 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects") // later replace with your domain
-      .then(res => res.json())
-      .then(data => setProjects(data));
-  }, []);
+  fetch("http://localhost:5000/api/projects")
+    .then(res => res.json())
+    .then(data => setProjects(data));
+}, []);
+
 
   return (
     <div className="project">

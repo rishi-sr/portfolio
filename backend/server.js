@@ -4,29 +4,47 @@ import cors from "cors";
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
-// connect to MongoDB Atlas
-mongoose.connect("mongodb://127.0.0.1:27017/portfolioDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+// ✅ MongoDB Atlas connection
+mongoose.connect(
+  "mongodb+srv://rishisrivastava1910:RSRI%401910@portfolio.3yx76fv.mongodb.net/myportfolio?retryWrites=true&w=majority&appName=portfolio"
+)
+.then(() => console.log("✅ MongoDB Atlas Connected"))
+.catch(err => console.error("❌ DB Connection Error:", err));
 
-
-// schema
+// 📌 Schema for "projects" collection
 const projectSchema = new mongoose.Schema({
   name: String,
   url: String,
   link: String,
   p: String,
-  skills: [String]
+  skills: [String],
 });
 
-const Project = mongoose.model("Project", projectSchema);
+// 🔗 Explicitly tell Mongoose to use "projects" collection
+const Project = mongoose.model("myportfolio", projectSchema, "projects");
 
-// API endpoint
+// 📌 GET all projects
 app.get("/api/projects", async (req, res) => {
-  const projects = await Project.find();
-  res.json(projects);
+  try {
+    const projects = await Project.find();
+    res.json(projects);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+// 📌 POST new project
+app.post("/api/projects", async (req, res) => {
+  try {
+    const newProject = new Project(req.body);
+    await newProject.save();
+    res.status(201).json(newProject);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+const PORT = 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
