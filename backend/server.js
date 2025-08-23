@@ -13,6 +13,13 @@ mongoose.connect(
 .then(() => console.log("✅ MongoDB Atlas Connected"))
 .catch(err => console.error("❌ DB Connection Error:", err));
 
+app.get('/',(req,res)=>{
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
+})
+
 // 📌 Schema for "projects" collection
 const projectSchema = new mongoose.Schema({
   name: String,
